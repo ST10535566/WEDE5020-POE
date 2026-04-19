@@ -1,2 +1,5 @@
 # WEDE5020-POE
-Business Proposal
+
+Thando Ntuli
+
+Business Proposal about my aspiring brand
