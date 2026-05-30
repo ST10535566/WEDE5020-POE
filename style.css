@@ -1,0 +1,68 @@
+/* /C:/Users/Student/Desktop/ST10535566 Thando Ntuli/css/style.css*/
+body {
+    /* fallback color */
+    background-color: turquoise;
+
+    /* layered backgrounds: gradient on top an image*/
+    color: rgb(250, 245, 245);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.welcomeHeader, .welcomeHeader{
+    margin: 2rem;
+    text-align: center;
+}
+ul {
+    list-style-type: none; /* Removing Bullets*/
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+
+ul li a {
+    float: center;
+}
+
+ul li a {
+    /* Displaying ul element on it own line*/
+    display: rgb(12, 12, 12);
+    /* font-color */
+    color: rgb(0, 0, 0);
+    /* Alligning Text */
+    text-align: center;
+    /* Padding for top and bottom 2 and 1 left and right*/
+    padding: 2px 1px;
+    /* Removing the underlined links */
+    text-decoration: none;
+    box-shadow: 10px 6px 11px 4px rgb(15, 55, 184); /*Box-Shadow Generated using...*/
+
+}
+
+/* Hover Effect */
+ul li a:hover {
+    background-color: aquamarine;
+}
+/* active link*/
+
+ul li a.active {
+    background-color: rgb(248, 245, 245);
+}
+
+.section-specs p {
+    border: 2px solid white;
+    margin: 2rem;
+}
+
+
+
+
+h1 {
+    background-color: rgb(20, 89, 238);
+    color: rgb(250, 244, 243);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 12px 16px 34px -2px navy;
+}
+
