@@ -5,6 +5,67 @@
             NAME: THANDO NTULI; STUDENT NUMBER: ST10535566
         </title>
 			<link rel="stylesheet" href="css/style.css">
+			<script src="js/script.js"></script>
+	<head>
+		<script>
+				let popupwindow = null;
+				<button click="showPopup()">Click Me</button>
+
+				//function for popup
+				function openPopup() {
+					//if popup already exists it won't close but focus
+					if (popupWindow & !popupWindow.closed) {
+						popupWindow.focus();
+						return;
+					}
+				
+				//open a new popup window
+				popupWindow = window.open(
+					"",//empty URL means blank page
+					"MyPopup", //window name
+					"width=400,height=300,resizable=yes,scrollbars=yes"
+				);
+
+				//check if popup was blocked
+				if (!popupWindow ){
+					alert("Popup blocked! Please allow popups for this site");
+					return;
+				}
+
+				//writes the content in the popup
+				popupWindow.document.write(`
+				<!DOCTYPE html>
+				<html>
+				<head>
+					<title>Popup Content</title>
+					<style>
+						body { font-family: Arial, sans-serif; padding: 20px; }
+						h2 { color: #007BFF; }
+					</style>
+				</head>
+				<body>
+					<h2> Salutations.</h2>
+					<p><p>
+Here at T-Studios we are a dance Powerhead in Mpumalanga<br>
+hoping to reach the likes of RedBull & Juste Debout with the<br>
+highly exceptional talent that South Africa has to offer<br>
+</p></p>
+					<button onclick="window.close()"> class="custom-btn">Return</button>
+					</body>
+					</html>
+				`);
+				popupWindow.document.close(); //finalize writing
+			}
+
+			//function to close the popup
+			function closePopup() {
+				if (popupWindow & !popupWindow.closed){
+					popupWindow.close();
+				} else {
+					alert("no popup is currently open.");
+				}
+			}
+		</script>
     </head>
 <body>
 
@@ -17,15 +78,15 @@
 	<nav>
 		<ul>
 			<table cellspacing="5" cellpadding="5">
-					<tr>
+				<tr>
 						
-							<li> <td> <a href="index.html" class="active">Homepage</a> </td> </li>
-							<li> <td> <a href="about.html">About Us</a> </td> </li>
-							<li> <td> <a href="snp.html" >Services and Products</a> </td> </li>
-							<li> <td> <a href="enquiry.html" >Enquiries</a> </td> </li>
-							<li> <td> <a href="contacts.html" >Contact Us</a> </td> </li>
+					<li> <td> <a href="index.html" class="active">Homepage</a> </td> </li>
+					<li> <td> <a href="about.html">About Us</a> </td> </li>
+					<li> <td> <a href="snp.html" >Services and Products</a> </td> </li>
+					<li> <td> <a href="enquiry.html" >Enquiries</a> </td> </li>
+					<li> <td> <a href="contacts.html" >Contact Us</a> </td> </li>
 						
-					</tr>
+				</tr>
 			</table>
 		</ul>
 	</nav>
@@ -58,6 +119,8 @@
 <h3>His inspiration came from the international dance phenomeno Juste Debout School</h3>
 </a>
 </header>
+
+<body onload="sayWelcome()"> <!--For greeting to website-->
 
 
 </body>

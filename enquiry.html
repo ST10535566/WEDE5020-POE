@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="css/style.css">
+<script src="js/script.js"></script>
 <html lang="en">
+<head>
+<body>
 
 <i><h1 style="color:rgb(248, 248, 248);"
  style="font-family:verdana;" >  Enquiry and Contact</h1></i>
@@ -19,7 +22,7 @@
 	</nav>
 <hr>
 
-<head>
+
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,11 +30,32 @@
 	<link rel="stylesheet" href="./styles.css">
 </head>
 
-<body>
 	<h1> Contact Form</h1>
-	<input type="text" name="first" placeholder="first name">
-	<input type="text" name="last" placeholder="last name">
-	<input type="email" name="email" placeholder="email adress">
+	<form onsubmit="return validateForm()">
+	<label for="name">Name:</label>
+	<input type="text" id="name" placeholder="Enter first name">
+	<label for="surname">Surname:</label>
+	<input type="text" id="surname" placeholder="Enter last name">
+	<label for="email">Email:</label>
+	<input type="email" id="email" placeholder="Enter email adress">
 	<textarea rows="5" cols="60" name="message" placeholder="enter text" ></textarea>
 	<button type="submit"> send message</button>
+	</form>
+
+<script>
+	function validateForm() {
+		let name =
+		document.getElementById("name").value;
+
+//Allowing only letters and spaces to appear
+		let lettersOnly= /^[A-Za-z]+$/;
+
+	if(!lettersOnly.test(name)){
+		alert("Invalid. Enter Text");
+		return false; //stops the submission of the text
+	}
+
+	return true; //allows the submission
+}
+</script>
 </body>
